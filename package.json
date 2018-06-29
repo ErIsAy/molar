@@ -1,0 +1,9 @@
+{
+  "name": "molardental",
+  "private": true,
+  "dependencies": {
+    "fullcalendar": "^3.9.0",
+    "material-design-icons": "^3.0.1",
+    "materialize-css": "^1.0.0-rc.1"
+  }
+}
