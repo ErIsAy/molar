@@ -3,7 +3,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.where(start: params[:start]..params[:end])
-  end
+    @event = Event.new
+    end
 
   def show; end
 

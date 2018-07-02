@@ -12,12 +12,14 @@
 //
 //= require moment/moment
 //= require jquery/dist/jquery
+//= require jquery-ui/build/release.js
+//= require jquery-ujs/src/rails
 //= require materialize-css/dist/js/materialize
 //= require fullcalendar/dist/fullcalendar
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
-// 
+//
 //
 //
 // let selector = document.querySelectorAll(".selector");
