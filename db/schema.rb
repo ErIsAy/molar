@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_01_045616) do
+ActiveRecord::Schema.define(version: 2018_07_02_001251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,15 @@ ActiveRecord::Schema.define(version: 2018_07_01_045616) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.datetime "start"
+    t.datetime "end"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "f_name"
     t.string "l_name"
@@ -49,6 +58,15 @@ ActiveRecord::Schema.define(version: 2018_07_01_045616) do
     t.integer "zip"
     t.bigint "phone"
     t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recurring_events", force: :cascade do |t|
+    t.string "title"
+    t.date "anchor"
+    t.integer "frequency", limit: 2, default: 0
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @recurring_event.title %>
+</p>
+
+<p>
+  <strong>Anchor:</strong>
+  <%= @recurring_event.anchor %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @recurring_event.frequency %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @recurring_event.color %>
+</p>
+
+<%= link_to 'Edit', edit_recurring_event_path(@recurring_event) %> |
+<%= link_to 'Back', recurring_events_path %>
