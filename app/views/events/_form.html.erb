@@ -1,10 +1,27 @@
-<%= simple_form_for @event, remote: true do |f| %>
-<div class="form-inputs">
-  <%= f.input :title %>
-  <%= f.input :date_range, input_html: { class: "form-control input-sm date-range-picker" } %>
-  <%= f.input_field :start, as: :hidden, value: Date.today, class: 'form-control input-sm start_hidden' %>
-  <%= f.input_field :end, as: :hidden, value: Date.today, class: 'form-control input-sm end_hidden' %>
-  <%= f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']] %>
+<%= simple_form_for @event do |f| %>
+<div class="row">
+
+  <!-- <%= f.input :title %> -->
+  <%=f.input :patient_id, as: :select, collection: @patients.collect {|p| [ p.f_name] }, input_html: {class: 'dropdown-trigger btn'} %>
+  <%=%>
+  <div class="input-field col s6">
+    <%= f.input :start, as: :string, input_html: { class: "datepicker start_hidden" } %>
+  </div>
+
+  <div class="input-field col s6 ">
+    <%= f.input :end, as: :string, input_html: { class: "datepicker end_hidden" } %>
+  </div>
+
+</div>
+<div class="row">
+  <div class="input-field col s6 ">
+    <%= f.input :start, as: :string, input_html: { class: "timepicker end_hidden" } %>
+  </div>
+  <div class="input-field col s6 ">
+    <%= f.input :end, as: :string, input_html: { class: "timepicker end_hidden" } %>
+  </div>
+  <%= f.input :color, as: :select, collection: [['Black','black'], ['Green','green'], ['Red','red']], disabled:[["Select One"]], input_html: {class: 'dropdown-trigger btn'}%>
+
 </div>
 
 <div class="form-actions">

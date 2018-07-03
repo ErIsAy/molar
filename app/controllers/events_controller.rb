@@ -4,6 +4,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.where(start: params[:start]..params[:end])
+    @patients = Patient.all
+
     @event = Event.new
   end
 
@@ -16,10 +18,10 @@ class EventsController < ApplicationController
   def edit; end
 
   def create
-    byebug
-
     @event = Event.new(event_params)
     @event.save
+
+    redirect_to events_path
   end
 
   def update
@@ -37,6 +39,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :date_range, :start, :end, :color)
+    params.require(:event).permit(:title, :date_range, :start, :end, :color, :patient_id)
   end
 end
