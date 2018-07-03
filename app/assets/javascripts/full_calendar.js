@@ -8,8 +8,6 @@
 // $(document).on('load', initialize_calendar);
 
 
-
-
 let initialize_calendar = function() {
   $('.calendar').each(function() {
     var calendar = $(this);

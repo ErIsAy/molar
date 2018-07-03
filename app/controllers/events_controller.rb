@@ -1,10 +1,11 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token
 
   def index
     @events = Event.where(start: params[:start]..params[:end])
     @event = Event.new
-    end
+  end
 
   def show; end
 
@@ -15,6 +16,8 @@ class EventsController < ApplicationController
   def edit; end
 
   def create
+    byebug
+
     @event = Event.new(event_params)
     @event.save
   end

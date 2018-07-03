@@ -11,12 +11,9 @@
 // about supported directives.
 //
 //= require moment/moment
-//= require jquery/dist/jquery
-//= require jquery-ui/build/release.js
-//= require jquery-ujs/src/rails
+//= require jquery
 //= require materialize-css/dist/js/materialize
 //= require fullcalendar/dist/fullcalendar
-//= require rails-ujs
 //= require activestorage
 //= require_tree .
 //
@@ -95,3 +92,8 @@
 //   document.querySelector('.active').style.fill = 'red';
 //   console.log('lol');
 // })
+
+
+$(document).ready(function() {
+  $('.modal').modal();
+});
