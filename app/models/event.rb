@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates :title, presence: true
+  # validates :title, presence: true
   attr_accessor :date_range
   belongs_to :patient
 

@@ -13,6 +13,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @patients = Patient.all
   end
 
   def edit; end

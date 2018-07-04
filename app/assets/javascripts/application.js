@@ -29,10 +29,7 @@ $(document).ready(function() {
 // date
 
 $(document).ready(function() {
+  $('.modal').modal();
   $('.datepicker').datepicker();
-});
-
-//time
-$(document).ready(function() {
   $('.timepicker').timepicker();
 });
