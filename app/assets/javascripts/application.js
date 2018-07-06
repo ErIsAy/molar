@@ -16,6 +16,7 @@
 //= require fullcalendar/dist/fullcalendar
 //= require daterangepicker/daterangepicker
 //= require rails-ujs
+//= require materialize-form
 //= require activestorage
 //= require_tree .
 //
@@ -31,5 +32,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.modal').modal();
   $('.datepicker').datepicker();
-  $('.timepicker').timepicker();
+  $('.timepicker').timepicker({
+    defaultTime: 'now'
+  });
 });

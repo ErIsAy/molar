@@ -27,7 +27,7 @@
         <td><%= patient.l_name %></td>
         <td><%= patient.gender %></td>
         <td><%= patient.birth_date %></td>
-        <td><%= patient.adress %></td>
+        <td><%= patient.address %></td>
         <td><%= patient.apt_suite %></td>
         <td><%= patient.city %></td>
         <td><%= patient.state %></td>
@@ -35,7 +35,7 @@
         <td><%= patient.phone %></td>
         <td><%= patient.email %></td>
         <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(doctor) %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

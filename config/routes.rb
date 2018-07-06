@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :med_histories
+  resources :notes
   resources :events
   resources :recurring_events
   resources :patients

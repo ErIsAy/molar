@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_03_185801) do
+ActiveRecord::Schema.define(version: 2018_07_05_212218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,33 @@ ActiveRecord::Schema.define(version: 2018_07_03_185801) do
     t.datetime "updated_at", null: false
     t.bigint "patient_id"
     t.index ["patient_id"], name: "index_events_on_patient_id"
+  end
+
+  create_table "med_histories", force: :cascade do |t|
+    t.string "q1"
+    t.string "q2"
+    t.string "q3"
+    t.string "q4"
+    t.string "q5"
+    t.string "q6"
+    t.string "q7"
+    t.string "q8"
+    t.string "q9"
+    t.string "q10"
+    t.string "q11"
+    t.string "q12"
+    t.bigint "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_med_histories_on_patient_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.text "body"
+    t.bigint "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_notes_on_patient_id"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -60,4 +87,6 @@ ActiveRecord::Schema.define(version: 2018_07_03_185801) do
   end
 
   add_foreign_key "events", "patients"
+  add_foreign_key "med_histories", "patients"
+  add_foreign_key "notes", "patients"
 end

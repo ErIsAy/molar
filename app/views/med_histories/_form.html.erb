@@ -1,0 +1,27 @@
+<%= simple_form_for(@med_history) do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<div class="row card container">
+  <div class='input-fields'>
+    <%=f.input :q1, as: :check_boxes, wrapper_html: { class: 'm6 s12' }%>
+  </div>
+
+  <%= f.input :q2 %>
+  <%= f.input :q3 %>
+  <%= f.input :q4 %>
+  <%= f.input :q5 %>
+  <%= f.input :q6 %>
+  <%= f.input :q7 %>
+  <%= f.input :q8 %>
+  <%= f.input :q9 %>
+  <%= f.input :q10 %>
+  <%= f.input :q11 %>
+  <%= f.input :q12 %>
+  <%= f.association :patient %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>
