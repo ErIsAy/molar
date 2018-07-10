@@ -1,13 +1,21 @@
-<%= simple_form_for(@med_history) do |f| %>
+<%= simple_form_for([@patient, @patient.med_histories.build]) do |f| %>
+
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
 <div class="row card container">
-  <div class='input-fields'>
-    <%=f.input :q1, as: :check_boxes, wrapper_html: { class: 'm6 s12' }%>
+  <div class='input-field col s12'>
+    <%=f.label :q1, "No - Yes"%>
+    <br>
+    <%=f.input :q1, as: :boolean, 
+                label: false,
+                checked_value: 'Yes', 
+                unchecked_value: 'No' %>
   </div>
 
-  <%= f.input :q2 %>
+  <div class='input-field col s12'>
+  <%=f.input :q2, as: :boolean, wrapper_html: { class: 'm6 s12' }%>
+  </div>
   <%= f.input :q3 %>
   <%= f.input :q4 %>
   <%= f.input :q5 %>
@@ -18,7 +26,7 @@
   <%= f.input :q10 %>
   <%= f.input :q11 %>
   <%= f.input :q12 %>
-  <%= f.association :patient %>
+  <%= f.hidden_field :patient_id %>
 </div>
 
 <div class="form-actions">

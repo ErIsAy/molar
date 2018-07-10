@@ -1,4 +1,5 @@
 class MedHistoriesController < ApplicationController
+  before_action :find_patient
   before_action :set_med_history, only: [:show, :edit, :update, :destroy]
 
   # GET /med_histories
@@ -28,7 +29,10 @@ class MedHistoriesController < ApplicationController
 
     respond_to do |format|
       if @med_history.save
-        format.html { redirect_to @med_history, notice: 'Med history was successfully created.' }
+        # format.html { redirect_to @med_history, notice: 'Med history was successfully created.' }
+        # byebug
+        format.html { redirect_to edit_patient_path(@med_history.patient.id), notice: 'Med history was successfully created.' }
+        
         format.json { render :show, status: :created, location: @med_history }
       else
         format.html { render :new }
@@ -62,9 +66,18 @@ class MedHistoriesController < ApplicationController
   end
 
   private
+
+    def find_patient
+      params[:format] ? 
+        @patient = Patient.find(params[:format]) 
+        : 
+        @patient = Patient.find(params[:patient_id])
+      # @patient = Patient.find(params[:format])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_med_history
       @med_history = MedHistory.find(params[:id])
+      # @patient = Patient.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

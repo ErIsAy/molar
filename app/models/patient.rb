@@ -1,4 +1,5 @@
 class Patient < ApplicationRecord
   has_many :events
-  has_one :med_history
+  has_many :med_histories
+  has_many :notes
 end

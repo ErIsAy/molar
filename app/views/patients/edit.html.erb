@@ -1,6 +1,11 @@
 <h1>Editing Patient</h1>
 
-<%= render 'form', patient: @patient %>
+<div class="container">
+  <%= render 'form', patient: @patient %>
+</div>
 
-<%= link_to 'Show', @patient %> |
-<%= link_to 'Back', patients_path %>
+<%= render partial: 'histories' %>
+
+
+<%# <%= link_to 'Show', @patient %> 
+<%# <%= link_to 'Back', patients_path %> 

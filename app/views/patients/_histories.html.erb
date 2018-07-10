@@ -1,0 +1,43 @@
+<table>
+  <thead>
+    <tr>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th>Q3</th>
+      <th>Q4</th>
+      <th>Q5</th>
+      <th>Q6</th>
+      <th>Q7</th>
+      <th>Q8</th>
+      <th>Q9</th>
+      <th>Q10</th>
+      <th>Q11</th>
+      <th>Q12</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patient.med_histories.each do |med_history| %>
+      <tr>
+        <td><%= med_history.q1 %></td>
+        <td><%= med_history.q2 %></td>
+        <td><%= med_history.q3 %></td>
+        <td><%= med_history.q4 %></td>
+        <td><%= med_history.q5 %></td>
+        <td><%= med_history.q6 %></td>
+        <td><%= med_history.q7 %></td>
+        <td><%= med_history.q8 %></td>
+        <td><%= med_history.q9 %></td>
+        <td><%= med_history.q10 %></td>
+        <td><%= med_history.q11 %></td>
+        <td><%= med_history.q12 %></td>
+        <%# <td><%= link_to 'Show', med_history %>
+        <%# </td>  %>
+        <td><%= link_to 'Edit', edit_med_history_path(med_history, @patient) %></td>
+        <td><%= link_to 'Destroy', med_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%=link_to 'new history', new_med_history_path(@patient)%>
