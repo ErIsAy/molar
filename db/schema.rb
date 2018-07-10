@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_212218) do
+ActiveRecord::Schema.define(version: 2018_07_09_191049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dental_charts", force: :cascade do |t|
+    t.string "tooth"
+    t.bigint "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_dental_charts_on_patient_id"
+  end
 
   create_table "doctors", force: :cascade do |t|
     t.string "f_name"
@@ -32,6 +40,14 @@ ActiveRecord::Schema.define(version: 2018_07_05_212218) do
     t.datetime "updated_at", null: false
     t.bigint "patient_id"
     t.index ["patient_id"], name: "index_events_on_patient_id"
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.string "description"
+    t.bigint "dental_chart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dental_chart_id"], name: "index_issues_on_dental_chart_id"
   end
 
   create_table "med_histories", force: :cascade do |t|
@@ -65,7 +81,6 @@ ActiveRecord::Schema.define(version: 2018_07_05_212218) do
     t.string "f_name"
     t.string "l_name"
     t.string "gender"
-    t.integer "birth_date"
     t.string "address"
     t.string "apt_suite"
     t.string "city"
@@ -75,6 +90,7 @@ ActiveRecord::Schema.define(version: 2018_07_05_212218) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "birth_date"
   end
 
   create_table "recurring_events", force: :cascade do |t|
@@ -86,7 +102,26 @@ ActiveRecord::Schema.define(version: 2018_07_05_212218) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "dental_charts", "patients"
   add_foreign_key "events", "patients"
+  add_foreign_key "issues", "dental_charts"
   add_foreign_key "med_histories", "patients"
   add_foreign_key "notes", "patients"
 end

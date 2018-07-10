@@ -6,6 +6,6 @@ json.array! @events do |event|
   json.end event.end.strftime(date_format)
   json.color event.color unless event.color.blank?
   json.allDay event.all_day_event? ? true : false
-  json.update_url event_path(event, method: :patch)
+  json.update_url edit_patient_path(event.patient_id)
   json.edit_url edit_event_path(event)
 end

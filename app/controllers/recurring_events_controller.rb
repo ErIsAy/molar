@@ -1,8 +1,10 @@
 class RecurringEventsController < ApplicationController
   before_action :set_recurring_event, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   def index
     @recurring_events = RecurringEvent.all
+    @user = current_user
   end
 
   def show; end

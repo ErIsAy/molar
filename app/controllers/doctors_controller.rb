@@ -1,16 +1,17 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+  before_action :set_doctor, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /doctors
   # GET /doctors.json
   def index
     @doctors = Doctor.all
+    @user = current_user
   end
 
   # GET /doctors/1
   # GET /doctors/1.json
-  def show
-  end
+  def show; end
 
   # GET /doctors/new
   def new
@@ -18,8 +19,7 @@ class DoctorsController < ApplicationController
   end
 
   # GET /doctors/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /doctors
   # POST /doctors.json
@@ -62,13 +62,14 @@ class DoctorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_doctor
-      @doctor = Doctor.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def doctor_params
-      params.require(:doctor).permit(:f_name, :l_name, :specialty)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_doctor
+    @doctor = Doctor.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def doctor_params
+    params.require(:doctor).permit(:f_name, :l_name, :specialty)
+  end
 end

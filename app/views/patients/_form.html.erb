@@ -1,24 +1,25 @@
 <%= form_with(model: patient, local: true, :html => {:class => 'row card'}) do |form| %>
-  <% if patient.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+<% if patient.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(patient.errors.count, "error") %>
+      prohibited this patient from being saved:</h2>
 
-      <ul>
+    <ul>
       <% patient.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+    </ul>
+  </div>
+<% end %>
+<div class="card-content">
 
   <div class="input-field col s6">
-    <%= form.label :f_name %>
+    <%= form.label :f_name, 'First Name' %>
     <%= form.text_field :f_name %>
   </div>
 
   <div class="input-field col s6">
-    <%= form.label :l_name %>
+    <%= form.label :l_name, 'Last Name' %>
     <%= form.text_field :l_name %>
   </div>
 
@@ -28,8 +29,11 @@
   </div>
 
   <div class="input-field col s6">
-    <%= form.label :birth_date %>
-    <%= form.number_field :birth_date %>
+    <%= form.label :birth_date, 'Birth Date' %>
+    <!-- <%= form.number_field :birth_date %> -->
+    <!-- <%= form.date_select :birth_date, class:'datepicker'%> -->
+    <%= form.date_select :birth_date, as: :date, class: "datepickertwo" %>
+
   </div>
 
   <div class="input-field col s6">
@@ -68,6 +72,8 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Add Patient",class: 'waves-effect waves-light btn' %>
   </div>
 <% end %>
+
+</div>

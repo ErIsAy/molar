@@ -1,0 +1,10 @@
+class CreateDentalCharts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :dental_charts do |t|
+      t.string :tooth
+      t.references :patient, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end

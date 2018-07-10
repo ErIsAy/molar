@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require jquery-ui.theme
  *= require fullcalendar/dist/fullcalendar
  *= require materialize-css/dist/css/materialize
  *= require materialize-css/sass/materialize
@@ -17,11 +18,22 @@
  *= require_self
  */
 
+@import "materialize";
 .zout {
   zoom: 0.7;
   /* Other non-webkit browsers */
   zoom: 70%;
   /* Webkit browsers */
+}
+
+nav ul a {
+  padding: 23px 15px;
+}
+
+.calendar {
+  padding: 40px;
+  zoom: 0.7;
+  zoom: 60%;
 }
 
 /* .col {

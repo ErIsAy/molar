@@ -16,7 +16,6 @@
 //= require fullcalendar/dist/fullcalendar
 //= require daterangepicker/daterangepicker
 //= require rails-ujs
-//= require materialize-form
 //= require activestorage
 //= require_tree .
 //
@@ -26,8 +25,8 @@ $(document).ready(function() {
   $('.modal').modal();
 });
 
-
 // date
+
 
 $(document).ready(function() {
   $('.modal').modal();
@@ -35,4 +34,22 @@ $(document).ready(function() {
   $('.timepicker').timepicker({
     defaultTime: 'now'
   });
+});
+
+//Side nav
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, options);
+});
+
+// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+// var collapsibleElem = document.querySelector('.collapsible');
+// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+// Or with jQuery
+
+$(document).ready(function() {
+  $('.sidenav').sidenav();
 });

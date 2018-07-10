@@ -1,16 +1,18 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :find_patient
+  before_action :set_note, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /notes
   # GET /notes.json
   def index
     @notes = Note.all
+    @user = current_user
   end
 
   # GET /notes/1
   # GET /notes/1.json
-  def show
-  end
+  def show; end
 
   # GET /notes/new
   def new
@@ -18,17 +20,16 @@ class NotesController < ApplicationController
   end
 
   # GET /notes/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /notes
   # POST /notes.json
   def create
-    @note = Note.new(note_params)
+    @note = @patient.notes.new(note_params)
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to @note, notice: 'Note was successfully created.' }
+        format.html { redirect_to edit_patient_path(@note.patient.id), notice: 'Note was successfully created.' }
         format.json { render :show, status: :created, location: @note }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class NotesController < ApplicationController
   def update
     respond_to do |format|
       if @note.update(note_params)
-        format.html { redirect_to @note, notice: 'Note was successfully updated.' }
+        format.html { redirect_to edit_patient_path(@note.patient.id), notice: 'Note was successfully updated.' }
         format.json { render :show, status: :ok, location: @note }
       else
         format.html { render :edit }
@@ -62,13 +63,24 @@ class NotesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_note
-      @note = Note.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def note_params
-      params.require(:note).permit(:body, :patient_id)
-    end
+  def find_patient
+    # /../../.......png
+    # params[:format] png
+
+    # /../../.... .1
+    # params[:format] 1
+    @patient = Patient.find(params[:patient_id])
+    # @patient = Patient.find(params[:format])
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_note
+    @note = Note.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def note_params
+    params.require(:note).permit(:body, :patient_id)
+  end
 end

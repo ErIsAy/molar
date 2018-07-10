@@ -1,3 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Med Histories</h1>
+
 <table>
   <thead>
     <tr>
@@ -33,11 +37,11 @@
         <td><%= med_history.q11 %></td>
         <td><%= med_history.q12 %></td>
         <%# <td><%= link_to 'Show', med_history %>
-        <%# </td>  %>
-        <td><%= link_to 'Edit', edit_med_history_path(med_history, @patient) %></td>
-        <td><%= link_to 'Destroy', med_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%=link_to 'new history', new_med_history_path(@patient)%>
+          <%# </td>  %>
+            <td><%= link_to 'Edit', edit_med_history_path(med_history, @patient) %></td>
+            <td><%= link_to 'Destroy', med_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%=link_to 'new history', new_patient_med_history_path(@patient), class: 'waves-effect waves-light btn'%>

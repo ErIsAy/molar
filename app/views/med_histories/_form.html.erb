@@ -5,27 +5,65 @@
 
 <div class="row card container">
   <div class='input-field col s12'>
-    <%=f.label :q1, "No - Yes"%>
-    <br>
-    <%=f.input :q1, as: :boolean, 
-                label: false,
-                checked_value: 'Yes', 
-                unchecked_value: 'No' %>
+    <%=f.label :q1, "Q1 No - Yes", class: 'right'%>
+    <%=f.input :q1, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No' %>
   </div>
 
   <div class='input-field col s12'>
-  <%=f.input :q2, as: :boolean, wrapper_html: { class: 'm6 s12' }%>
+    <%=f.label :q2, "No - Yes"%>
+    <br>
+    <%=f.input :q2, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
   </div>
-  <%= f.input :q3 %>
-  <%= f.input :q4 %>
-  <%= f.input :q5 %>
-  <%= f.input :q6 %>
-  <%= f.input :q7 %>
-  <%= f.input :q8 %>
-  <%= f.input :q9 %>
-  <%= f.input :q10 %>
-  <%= f.input :q11 %>
-  <%= f.input :q12 %>
+  <div class='input-field col s12'>
+    <%=f.label :q3, "No - Yes"%>
+    <br>
+    <%=f.input :q3, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q4, "No - Yes"%>
+    <br>
+    <%=f.input :q4, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q5, "No - Yes"%>
+    <br>
+    <%=f.input :q5, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q6, "No - Yes"%>
+    <br>
+    <%=f.input :q6, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q7, "No - Yes"%>
+    <br>
+    <%=f.input :q7, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q8, "No - Yes"%>
+    <br>
+    <%=f.input :q8, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q9, "No - Yes"%>
+    <br>
+    <%=f.input :q9, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q10, "No - Yes"%>
+    <br>
+    <%=f.input :q10, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q11, "No - Yes"%>
+    <br>
+    <%=f.input :q11, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s12'>
+    <%=f.label :q12, "No - Yes"%>
+    <br>
+    <%=f.input :q12, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
   <%= f.hidden_field :patient_id %>
 </div>
 

@@ -1,17 +1,19 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /patients
   # GET /patients.json
   def index
     @patients = Patient.all
+    @user = current_user
   end
 
   # GET /patients/1
   # GET /patients/1.json
   def show
     @patients = Patient.all
-    MedHistory.all
+     # MedHistory.all
    end
 
   # GET /patients/new
@@ -29,7 +31,7 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Patient was successfully created.' }
         format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new }

@@ -1,9 +1,12 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!
+
   def index; end
 
   def chart
     @patients = Patient.all
     @patient = Patient.new
+    @user = current_user
   end
 
   def new; end

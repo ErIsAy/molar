@@ -1,0 +1,85 @@
+<!-- <nav class="top-nav"> <div class="nav-wrapper"> <a href="#" class="brand-logo center">Logo</a> <ul id="nav-mobile" class="left hide-on-med-and-down"> <li> <%= link_to "New Patient", new_patient_path%> </li> <li> <a href="#">asdfasfasdf</a> </li>
+<li> <%= link_to "Link 1", root_path%> </li> <li> <%= link_to "Link 2"%> </li> <li> <a href="#" data-target="slide-out" class="sidenav-trigger"> <i class="material-icons">menu</i> </a> </li> </ul> </div> </nav> -->
+
+<!-- side -->
+<!-- side -->
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li>
+    <a href="#!">one</a>
+  </li>
+  <li>
+    <a href="#!">two</a>
+  </li>
+  <li class="divider"></li>
+  <li>
+    <a href="#!">three</a>
+  </li>
+</ul>
+<nav class='nav-fixed'>
+  <div class="nav-wrapper">
+    <%# <a href="#!" class="brand-logo">Logo</a> %>
+      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <%= link_to "New Patient", new_patient_path%>
+        </li>
+        <li>
+          <%= link_to root_path do %>
+          <i class="material-icons">perm_contact_calendar</i>
+          Appointments
+        <%end%>
+      </li>
+      <!-- Dropdown Trigger -->
+      <li class="nav-item active"><%= link_to "Edit Profile", edit_user_registration_path, class: "" %></li>
+      <li class="nav-item"><%= link_to t("auth.sign_out"), destroy_user_session_path, method: "delete", class: "" %></li>
+      <li class="nav-item"><%= link_to t("auth.sign_in"), new_user_session_path, class: "" %></li>
+      <li class="nav-item"><%= link_to t("auth.sign_up"), new_user_registration_path, class: "" %></li>
+
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Slider -->
+<ul id="slide-out" class="sidenav">
+  <li>
+    <div class="user-view">
+      <div class="background">
+        <img src="<%=image_path('instrumentos.jpg')%>" style="width:300px;">
+      </div>
+      <a href="#user"><img class="circle" src="<%=image_path('muelita.jpg')%>"></a>
+      <a href="#name">
+        <span class="white-text name">John Doe</span></a>
+      <a href="#email">
+        <span class="white-text email">jdandturk@gmail.com</span></a>
+    </div>
+  </li>
+  <li>
+    <a href="#!">
+      <i class="material-icons">cloud</i>First Link With Icon</a>
+  </li>
+  <li>
+    <%= link_to patients_path do %>
+    <i class="material-icons">person_add</i>
+    Patients
+  <%end%>
+
+</li>
+<li>
+  <div class="divider"></div>
+</li>
+<li>
+  <a class="subheader">Staff</a>
+</li>
+<li>
+  <%= link_to "Doctors", doctors_path%>
+
+  <!-- <a class="waves-effect" href="#!">Third Link With Waves</a> -->
+</li>
+</ul>

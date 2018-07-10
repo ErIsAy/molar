@@ -1,48 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Patients</h1>
+<div class="container">
+  <div class="card">
+    <div class="card-content">
+      <h1>Patients</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>F name</th>
-      <th>L name</th>
-      <th>gender</th>
-      <th>birth_date</th>
-      <th>adress</th>
-      <th>apt_suite</th>
-      <th>city</th>
-      <th>state</th>
-      <th>zip</th>
-      <th>phone</th>
-      <th>email</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Gender</th>
+            <th>Birth_Date</th>
+            <th>Adress</th>
+            <th>Apt Suite</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @patients.each do |patient| %>
-      <tr>
-        <td><%= patient.f_name %></td>
-        <td><%= patient.l_name %></td>
-        <td><%= patient.gender %></td>
-        <td><%= patient.birth_date %></td>
-        <td><%= patient.address %></td>
-        <td><%= patient.apt_suite %></td>
-        <td><%= patient.city %></td>
-        <td><%= patient.state %></td>
-        <td><%= patient.zip %></td>
-        <td><%= patient.phone %></td>
-        <td><%= patient.email %></td>
-        <%# <td><%= link_to 'Show', patient %>
-        <%# </td> %>
-        <td><%= link_to 'Ver', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @patients.each do |patient| %>
+            <tr>
+              <td><%= patient.f_name %></td>
+              <td><%= patient.l_name %></td>
+              <td><%= patient.gender %></td>
+              <td><%= patient.birth_date %></td>
+              <td><%= patient.address %></td>
+              <td><%= patient.apt_suite %></td>
+              <td><%= patient.city %></td>
+              <td><%= patient.state %></td>
+              <td><%= patient.zip %></td>
+              <td><%= patient.phone %></td>
+              <td><%= patient.email %></td>
+              <%# <td><%= link_to 'Show', patient %>
+                <%# </td> %>
+                  <td><%= link_to 'Ver', edit_patient_path(patient) %></td>
+                  <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <br>
 
-<br>
+          <%= link_to 'Add New Patient', new_patient_path, class: 'waves-effect waves-light btn' %>
+        </div>
 
-<%= link_to 'New Patient', new_patient_path %>
+      </div>
+
+    </div>
