@@ -21,6 +21,7 @@ let initialize_calendar = function() {
       selectHelper: true,
       editable: true,
       eventLimit: true,
+      displayEventTime: false,
       eventSources: [
         '/events.json',
         '/recurring_events.json'

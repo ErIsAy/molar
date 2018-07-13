@@ -29,51 +29,53 @@
   </div>
 
   <div class="input-field col s6">
-    <%= form.label :birth_date, 'Birth Date' %>
-    <!-- <%= form.number_field :birth_date %> -->
-    <!-- <%= form.date_select :birth_date, class:'datepicker'%> -->
-    <%= form.date_select :birth_date, as: :date, class: "datepickertwo" %>
+    <%# <%= form.label :birth_date, 'Birth Date' %>
+      <!-- <%= form.number_field :birth_date %> -->
+      <!-- <%= form.date_select :birth_date, class:'datepicker'%> -->
 
-  </div>
+      <%= form.date_field :birth_date, as: :date,label: false, input_html: { class: "datepicker" } %>
 
-  <div class="input-field col s6">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+    </div>
 
-  <div class="input-field col s6">
-    <%= form.label :apt_suite %>
-    <%= form.text_field :apt_suite %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.label :address %>
+      <%= form.text_field :address %>
+    </div>
 
-  <div class="input-field col s6">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.label :apt_suite %>
+      <%= form.text_field :apt_suite %>
+    </div>
 
-  <div class="input-field col s6">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.label :city %>
+      <%= form.text_field :city %>
+    </div>
 
-  <div class="input-field col s6">
-    <%= form.label :zip %>
-    <%= form.number_field :zip %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.label :state %>
+      <%= form.text_field :state %>
+    </div>
 
-  <div class="input-field col s6">
-    <%= form.label :phone %>
-    <%= form.number_field :phone %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.label :zip %>
+      <%= form.number_field :zip %>
+    </div>
 
-  <div class="input-field col s6">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+    <div class="input-field col s6">
+      <%= form.label :phone %>
+      <%= form.number_field :phone %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit "Add Patient",class: 'waves-effect waves-light btn' %>
-  </div>
-<% end %>
+    <div class="input-field col s6">
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit (patient.id ? "Make Changes" : "Add Patient" ), class: 'waves-effect waves-light btn marginbtm' %>
+    </div>
+
+  <% end %>
 
 </div>

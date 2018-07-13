@@ -85,6 +85,11 @@ class MedHistoriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def med_history_params
-    params.require(:med_history).permit(:q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10, :q11, :q12, :patient_id)
+    params.require(:med_history).permit(:q1, :q2, :q3, :q4, :q5, :q6, :q7, :q8, :q9, :q10, :q11, :q12,
+                                        :t1, :t2, :t3, :t4, :t5, :t6, :t7, :t8,
+                                        :t9, :t10, :t11, :t12, :t13, :t14, :t15, :t16,
+                                        :t17, :t18, :t19, :t20, :t21, :t22, :t23, :t24,
+                                        :t25, :t26, :t27, :t28, :t29, :t30, :t31, :t32,
+                                        :patient_id)
   end
 end

@@ -13,6 +13,10 @@ class CreateMedHistories < ActiveRecord::Migration[5.2]
       t.string :q10
       t.string :q11
       t.string :q12
+
+      # t.text :c1
+
+
       t.references :patient, foreign_key: true
 
       t.timestamps

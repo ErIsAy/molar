@@ -1,13 +1,16 @@
 <div class="container">
-  <h1>Editing Patient</h1>
+
+  <h1>Patient Record</h1>
 
   <%= render 'form', patient: @patient %>
 </div>
+<br>
+
 <div class="container">
+  <h1>Medical History</h1>
   <%= render partial: 'histories' %>
-
 </div>
-
+<br>
 <div class="container">
   <%= render partial: 'notes' %>
 </div>

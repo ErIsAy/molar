@@ -1,0 +1,603 @@
+<div class="row">
+  <div class="col s12 m12 l12 ">
+    <div class="row zout">
+      <div class="col tooth ">
+        <div class='input-field select'>
+          <%= f.select(:t1, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t2, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t3, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t4, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t5, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t6, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t7, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t8, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t9, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t10, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t11, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t12, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t13, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t14, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t15, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t16, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+
+    </div>
+
+    <div class="row zout">
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t17, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t18, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t19, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t20, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t21, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t22, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t23, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t24, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t25, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t26, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t27, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 1 -->
+          <g id="incisor-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="incisal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 112.5 75 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 187.5 226 112.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 187.5 225 187.5" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 112.5 75 187.5" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t28, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            lalalalala
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t29, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 300 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 5 -->
+          <g id="premolar-group">
+            <rect x="75" y="75" stroke="black" class="selector" id="occlusal" style="stroke-width: 5px;" width="150" height="150" fill="white"/>
+            <polygon stroke="black" class="selector" id="buccal" style="stroke-width: 5px;" points="0 0 300 0 225 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="300 0 300 300 225 225 225 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="palatal" style="stroke-width: 5px;" points="300 300 0 300 75 225 225 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t30, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t31, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+      <div class="col tooth">
+        <div class='input-field select'>
+          <%= f.select(:t32, [['SE', 1],['PR', 2],['N.P', 3],['P', 4],['P-CO', 5],['Pe', 6],['T.C.', 7],['R.R', 8],['PU', 9],['E.S', 10],['REC', 11],['EP', 12]], {}, { :class => 'select' }) %>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75px" height="50px" viewbox="0 0 400 300" preserveaspectratio="xMidYMid meet">
+          <!-- upper right 8 -->
+          <g id="molar-group" class="molar">
+            <rect x="75" y="75" stroke="black" class="selector" id="disto-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+            <rect x="200" y="75" stroke="black" class="selector" id="mesio-occlusal" style="stroke-width: 5px;" width="125" height="150" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="disto-buccal" style="stroke-width: 5px;" points="0 0 200 0 200 75 75 75" fill="white"/>
+            <polygon stroke="black" class="selector" id="mesio-buccal" style="stroke-width: 5px;" points="200 0 400 0 325 75 200 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesial" style="stroke-width: 5px;" points="400 0 400 300 325 225 325 75" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="mesio-palatal" style="stroke-width: 5px;" points="400 300 200 300 200 225 325 225" fill="white"/>
+            <polygon stroke="black" class="selector" id="disto-palatal" style="stroke-width: 5px;" points="200 300 0 300 75 225 200 225" fill="white"/>
+
+            <polygon stroke="black" class="selector" id="distal" style="stroke-width: 5px;" points="0 300 0 0 75 75 75 225" fill="white"/>
+          </g>
+        </svg>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="container padleft">
+      <button class="waves-effect waves-light btn" type="button" id="1" name="button">Previous TX</button>
+      <button class="waves-effect waves-light btn" type="button" id="2" name="button">Need TX</button>
+      <%# <button class="waves-effect waves-light btn" type="button" id="3" name="button">Post</button> %>
+      </div>
+
+    </div>
+  </div>

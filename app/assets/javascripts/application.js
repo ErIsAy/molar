@@ -21,14 +21,22 @@
 //
 //
 
+
+
+
 $(document).ready(function() {
   $('.modal').modal();
+   M.updateTextFields();
+
+
+
 });
 
 // date
 
 
 $(document).ready(function() {
+  $('.collapsible').collapsible();
   $('.modal').modal();
   $('.datepicker').datepicker();
   $('.timepicker').timepicker({
