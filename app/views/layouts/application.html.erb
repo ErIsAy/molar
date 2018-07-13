@@ -6,11 +6,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css' %>
+
+
+
   </head>
+    <% if user_signed_in? %>
+      <%= render 'layouts/top_navbar'%>
+    <% end %>
 
   <body class="<%= controller_name %> <%= action_name %>">
+
     <%= yield %>
+   
     <%= javascript_include_tag 'application' %>
+    
 
   </body>
 </html>

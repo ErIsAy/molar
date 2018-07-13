@@ -1,5 +1,6 @@
-<h1>New Doctor</h1>
+<div class="container">
+  <h1>New Doctor</h1>
 
-<%= render 'form', doctor: @doctor %>
-
-<%= link_to 'Back', doctors_path %>
+  <%= render 'form', doctor: @doctor %>
+  <%= link_to 'Back', doctors_path, class:'waves-effect waves-light btn' %>
+</div>

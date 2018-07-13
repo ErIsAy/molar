@@ -21,6 +21,7 @@ let initialize_calendar = function() {
       selectHelper: true,
       editable: true,
       eventLimit: true,
+      displayEventTime: false,
       eventSources: [
         '/events.json',
         '/recurring_events.json'
@@ -39,7 +40,7 @@ let initialize_calendar = function() {
       eventDrop: function(event, delta, revertFunc) {
         event_data = {
           event: {
-            id: event.id,
+            tittle: event.tittle,
             start: event.start.format(),
             end: event.end.format()
           }
@@ -52,6 +53,10 @@ let initialize_calendar = function() {
       },
 
       eventClick: function(event, jsEvent, view) {
+
+        window.location.href = event.update_url
+
+
         $.getScript(event.edit_url, function() {
           $('#event_date_range').val(moment(event.start).format("MM/DD/YYYY HH:mm") + ' - ' + moment(event.end).format("MM/DD/YYYY HH:mm"))
           date_range_picker();

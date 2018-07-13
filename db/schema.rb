@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_03_185801) do
+ActiveRecord::Schema.define(version: 2018_07_10_061243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dental_charts", force: :cascade do |t|
+    t.string "tooth"
+    t.bigint "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_dental_charts_on_patient_id"
+  end
 
   create_table "doctors", force: :cascade do |t|
     t.string "f_name"
@@ -34,11 +42,77 @@ ActiveRecord::Schema.define(version: 2018_07_03_185801) do
     t.index ["patient_id"], name: "index_events_on_patient_id"
   end
 
+  create_table "issues", force: :cascade do |t|
+    t.string "description"
+    t.bigint "dental_chart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dental_chart_id"], name: "index_issues_on_dental_chart_id"
+  end
+
+  create_table "med_histories", force: :cascade do |t|
+    t.string "q1"
+    t.string "q2"
+    t.string "q3"
+    t.string "q4"
+    t.string "q5"
+    t.string "q6"
+    t.string "q7"
+    t.string "q8"
+    t.string "q9"
+    t.string "q10"
+    t.string "q11"
+    t.string "q12"
+    t.bigint "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "t1"
+    t.string "t2"
+    t.string "t3"
+    t.string "t4"
+    t.string "t5"
+    t.string "t6"
+    t.string "t7"
+    t.string "t8"
+    t.string "t9"
+    t.string "t10"
+    t.string "t11"
+    t.string "t12"
+    t.string "t13"
+    t.string "t14"
+    t.string "t15"
+    t.string "t16"
+    t.string "t17"
+    t.string "t18"
+    t.string "t19"
+    t.string "t20"
+    t.string "t21"
+    t.string "t22"
+    t.string "t23"
+    t.string "t24"
+    t.string "t25"
+    t.string "t26"
+    t.string "t27"
+    t.string "t28"
+    t.string "t29"
+    t.string "t30"
+    t.string "t31"
+    t.string "t32"
+    t.index ["patient_id"], name: "index_med_histories_on_patient_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.text "body"
+    t.bigint "patient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_notes_on_patient_id"
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "f_name"
     t.string "l_name"
     t.string "gender"
-    t.integer "birth_date"
     t.string "address"
     t.string "apt_suite"
     t.string "city"
@@ -48,6 +122,7 @@ ActiveRecord::Schema.define(version: 2018_07_03_185801) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "birth_date"
   end
 
   create_table "recurring_events", force: :cascade do |t|
@@ -59,5 +134,26 @@ ActiveRecord::Schema.define(version: 2018_07_03_185801) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "dental_charts", "patients"
   add_foreign_key "events", "patients"
+  add_foreign_key "issues", "dental_charts"
+  add_foreign_key "med_histories", "patients"
+  add_foreign_key "notes", "patients"
 end

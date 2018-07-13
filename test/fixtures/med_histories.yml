@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  q1: MyString
+  q2: MyString
+  q3: MyString
+  q4: MyString
+  q5: MyString
+  q6: MyString
+  q7: MyString
+  q8: MyString
+  q9: MyString
+  q10: MyString
+  q11: MyString
+  q12: MyString
+  patient: one
+
+two:
+  q1: MyString
+  q2: MyString
+  q3: MyString
+  q4: MyString
+  q5: MyString
+  q6: MyString
+  q7: MyString
+  q8: MyString
+  q9: MyString
+  q10: MyString
+  q11: MyString
+  q12: MyString
+  patient: two

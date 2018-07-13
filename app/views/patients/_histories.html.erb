@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<% @patient.med_histories.each do |med_history| %>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header">
+        <i class="material-icons">filter_drama</i><%= med_history.created_at.strftime('%m/%d/%Y') %></div>
+      <div class="collapsible-body">
+        <table class="zouttwo">
+          <thead>
+            <th>Problemas Cardiacos?</th>
+
+            <th>Hepatitis?</th>
+
+            <th>Asma?</th>
+
+            <th>Anemia?</th>
+
+            <th>Embarazada?</th>
+
+            <th>H.I.V?</th>
+
+            <th>Diabetes?</th>
+
+            <th>Presion Sanguinea Anormal</th>
+
+            <th>Asma?</p>
+
+            <th>Epilepsia?</th>
+
+            <th>Esta Tomando Algun Medicamento?</th>
+
+            <th>Transplantado?</th>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <span>
+                <td><%= med_history.q1 %></td>
+                <td><%= med_history.q2 %></td>
+                <td><%= med_history.q3 %></td>
+                <td><%= med_history.q4 %></td>
+                <td><%= med_history.q5 %></td>
+                <td><%= med_history.q6 %></td>
+                <td><%= med_history.q7 %></td>
+                <td><%= med_history.q8 %></td>
+                <td><%= med_history.q9 %></td>
+                <td><%= med_history.q10 %></td>
+                <td><%= med_history.q11 %></td>
+                <td><%= med_history.q12 %></td>
+
+              </tr>
+            </span>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <%# <td><%= link_to 'Show', med_history %>
+        <%# </td>  %>
+          <td><%= link_to 'Edit', edit_med_history_path(med_history, @patient) %></td>
+          <td><%= link_to 'Delete', med_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
+      </li>
+
+    </ul>
+  <% end %>
+
+  <%=link_to 'new history', new_patient_med_history_path(@patient), class: 'waves-effect waves-light btn'%>

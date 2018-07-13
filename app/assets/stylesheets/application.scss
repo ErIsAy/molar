@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require jquery-ui.theme
  *= require fullcalendar/dist/fullcalendar
  *= require materialize-css/dist/css/materialize
  *= require materialize-css/sass/materialize
@@ -17,13 +18,79 @@
  *= require_self
  */
 
+// @import "materialize";
+
+
+// a {
+//   :hover {
+//     color: #666;
+//   }
+// }
+
+// .active {
+//   background-color: white;
+//   color: #666;
+// }
+.row .col .tooth {
+  padding: 0 5px;
+}
+
+.modal {
+  width: 77%;
+}
+
+.material-icons.top_navbar {
+  font-size: 36px;
+  // padding: 23px 15px;
+}
+
+.padl{
+  padding-left: 150px ;
+}
+.zouttwo{
+  zoom: 0.9;
+
+  zoom: 90%;
+
+}
 .zout {
-  zoom: 0.7;
+  zoom: 0.5;
   /* Other non-webkit browsers */
-  zoom: 70%;
+  zoom: 50%;
   /* Webkit browsers */
+}
+
+// nav ul a {
+//   padding: 23px 15px;
+// }
+
+.top-icon {
+  color: white;
+}
+.padleft{
+  padding-left: 43px;
+}
+.calendar {
+  padding: 40px;
 }
 
 /* .col {
   border: 0.5px solid red;
 } */
+
+.marginbtm{
+  margin: 10px 150px;
+}
+
+.select{
+  display: block !important;
+}
+.med_history_t1 {
+ width: 76px;
+}
+.med_history_t2 {
+  width: 76px;
+}
+body {
+  background-color: #90caf9;
+}

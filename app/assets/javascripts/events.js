@@ -3,7 +3,8 @@
 
 
 $(document).ready(function() {
-  if (!document.querySelector('body.home.chart')) {
+
+  if (!document.querySelector('.med_histories.new')) {
     return;
   }
 
@@ -44,8 +45,8 @@ $(document).ready(function() {
     };
 
   }
-  new ActionButton('1', 'red')
-  new ActionButton('2', 'blue')
+  new ActionButton('1', '#e57373')
+  new ActionButton('2', '#64b5f6')
   new ActionButton('3', 'green')
 
 

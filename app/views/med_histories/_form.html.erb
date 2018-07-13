@@ -1,0 +1,82 @@
+<%= simple_form_for([@patient, @patient.med_histories.build]) do |f| %>
+
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<div class="container">
+  <%= render partial: 'chart', :locals => { :f => f } %>
+</div>
+<br>
+<br>
+<h1>Antecedentes Medicos</h1>
+
+<div class="row card">
+
+  <div class='input-field col s6'>
+    <%=f.label :q1, "Problemas Cardiacos", class: ''%>
+    <br>
+    <%=f.input :q1, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', class: 'padl' %>
+  </div>
+
+  <div class='input-field col s6'>
+    <%=f.label :q2, "Diabetes"%>
+    <br>
+    <%=f.input :q2, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q3, "Hepatitis"%>
+    <br>
+    <%=f.input :q3, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q4, "Presion Sanguinea Anormal"%>
+    <br>
+    <%=f.input :q4, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q5, "Asma"%>
+    <br>
+    <%=f.input :q5, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q6, "Asma"%>
+    <br>
+    <%=f.input :q6, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q7, "Anemia"%>
+    <br>
+    <%=f.input :q7, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q8, "Epilepsia"%>
+    <br>
+    <%=f.input :q8, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q9, "Embarazada"%>
+    <br>
+    <%=f.input :q9, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q10, "Esta tomando algun medicamento?"%>
+    <br>
+    <%=f.input :q10, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q11, "H.I.V"%>
+    <br>
+    <%=f.input :q11, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <div class='input-field col s6'>
+    <%=f.label :q12, "Transplantado"%>
+    <br>
+    <%=f.input :q12, as: :boolean, label: false, checked_value: 'Yes', unchecked_value: 'No', wrapper_html: { class: 'm6 s12' }%>
+  </div>
+  <%= f.hidden_field :patient_id %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit, class:'waves-effect waves-light btn' %>
+</div>
+<% end %>

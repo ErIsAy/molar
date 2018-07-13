@@ -1,16 +1,20 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  before_action :set_patient, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /patients
   # GET /patients.json
   def index
     @patients = Patient.all
+    @user = current_user
   end
 
   # GET /patients/1
   # GET /patients/1.json
   def show
-  end
+    @patients = Patient.all
+     # MedHistory.all
+   end
 
   # GET /patients/new
   def new
@@ -18,8 +22,7 @@ class PatientsController < ApplicationController
   end
 
   # GET /patients/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /patients
   # POST /patients.json
@@ -28,7 +31,7 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Patient was successfully created.' }
         format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new }
@@ -62,13 +65,14 @@ class PatientsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_patient
-      @patient = Patient.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def patient_params
-      params.require(:patient).permit(:f_name, :l_name, :gender, :birth_date, :address, :apt_suite, :city, :state, :zip, :phone, :email)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_patient
+    @patient = Patient.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def patient_params
+    params.require(:patient).permit(:f_name, :l_name, :gender, :birth_date, :address, :apt_suite, :city, :state, :zip, :phone, :email)
+  end
 end
